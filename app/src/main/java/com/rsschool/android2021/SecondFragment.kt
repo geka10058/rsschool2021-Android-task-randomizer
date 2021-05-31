@@ -51,7 +51,6 @@ class SecondFragment : Fragment() {
 
         backButton?.setOnClickListener {
             listenerTwo?.backToFirstFragment(resultValue)
-
         }
     }
 
@@ -68,7 +67,6 @@ class SecondFragment : Fragment() {
             args.putInt(MAX_VALUE_KEY, max)
             args.putInt(MIN_VALUE_KEY, min)
             fragment.arguments = args
-            // TODO: implement adding arguments
 
             return fragment
         }

@@ -17,18 +17,11 @@ public class MainActivity extends AppCompatActivity implements FirstFragment.Act
         openFirstFragment(0);
     }
 
-    /*@Override
-    public void onActionPerformed(){
-
-    }*/
-
     private void openFirstFragment(int previousNumber) {
         final Fragment firstFragment = FirstFragment.newInstance(previousNumber);
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, firstFragment);
         transaction.commit();
-
-        // TODO: invoke function which apply changes of the transaction
     }
 
     private void openSecondFragment(int min, int max) {
@@ -41,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements FirstFragment.Act
 
     @Override
     public void onActionPerformed(int min, int max) {
-        //;
         openSecondFragment(min, max);
     }
 
